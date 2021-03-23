@@ -8,6 +8,6 @@ const photoRankSchema = new Schema({
   date: { type: Date, required: true },
 });
 
-const User = mongoose.model("PhotoRank", photoRankSchema);
+const PhotoRank = mongoose.model("PhotoRank", photoRankSchema);
 
-export default User;
+module.exports = PhotoRank;

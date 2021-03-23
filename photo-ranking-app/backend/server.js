@@ -24,6 +24,12 @@ db.once("open", function () {
   console.log(`MongoDB database connection established successfully`);
 });
 
+const photoranksRoute = require("./routes/photoranks");
+const usersRoute = require("./routes/users");
+
+app.use("/photoranks", photoranksRoute);
+app.use("/users", usersRoute);
+
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
 });
